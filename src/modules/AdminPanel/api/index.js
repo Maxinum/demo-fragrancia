@@ -1,4 +1,4 @@
-import { $managerHost, $host, $adminHost } from "../../../http/index";
+import { $managerHost, $host, $adminHost } from "../../../APIs/index";
 import jwt_decode from "jwt-decode";
 
 export const fetchUsers = async () => {

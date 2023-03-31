@@ -10,8 +10,6 @@ const TabPanel = (props) => {
             style={{height:'91%'}}
             role="tabpanel"
             hidden={value !== index}
-            id={`vertical-tabpanel-${index}`}
-            aria-labelledby={`vertical-tab-${index}`}
             {...other}
         >
             {children}

@@ -44,7 +44,7 @@
 }
 
 .note {
-    width: calc(65% - 170px);
+    width: calc(100% - 170px);
     outline: none;
     border: 0;
 }

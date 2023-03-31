@@ -9,6 +9,7 @@ import { fetchPerfumes } from './api';
 import last from './helpers/LastRow';
 import { toJS } from 'mobx';
 import { addDots } from '../../helpers/Dotter';
+import Discount from './helpers/Discount';
 
 const AromatTable = observer((props) => {
     const orders = props.data.orders;
@@ -29,7 +30,8 @@ const AromatTable = observer((props) => {
                     <Row key={index} row={element} index={index} data={products.perfumes} store={orders} />
                 ))}
             </tbody>
-            <Footer subtotal={addDots(orders.SubTotal)} type={orders.saleType} store={orders}/>
+            <Footer client={client} products={products} subtotal={addDots(orders.SubTotal)} 
+            percent={orders.percent} type={orders.saleType} store={orders}/>
         </table>
     );
 });

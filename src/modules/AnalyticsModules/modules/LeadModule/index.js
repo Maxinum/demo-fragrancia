@@ -1,10 +1,16 @@
 import React from 'react';
+import SkeletonLayout from './components/Skeleton';
 
 const LeadModule = () => {
+    const fetch = false;
     return (
-        <div>
-            LeadModule
-        </div>
+        fetch ? (
+            <div>
+                LeadModule
+            </div >
+        ) : (
+            <SkeletonLayout />
+        )
     );
 }
 

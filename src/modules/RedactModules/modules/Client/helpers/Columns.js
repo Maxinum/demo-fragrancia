@@ -1,4 +1,4 @@
-let params = { values: { '1': 'Архив', '0': 'В продаже' }, clearable: true };
+let params = { values: { '1': 'Archive', '0': 'On sale' }, clearable: true };
 
 export const columns = [
     {

@@ -18,3 +18,48 @@
     align-items: center;
     justify-content: space-around;
 }
+
+.div_bufopt_header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    border-bottom: 1px solid #065f46;
+    height: 40px;
+}
+
+.div_bufopt {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: fit-content;
+    min-height: 35px;
+    border-bottom: 1px solid black;
+}
+
+.selectradio {
+    opacity: 0;
+}
+
+.option_label {
+    height: 100%;
+    width: 100%;
+    font-size: 16px;
+    text-align: center;
+    padding-top: 10px;
+}
+
+.selectradio:checked~label {
+    color: #065f46;
+    font-weight: 600;
+}
+
+div > input.selectradio:checked + div.div_bufopt {
+    border: 1px solid black;
+}
+
+.imgbuffer {
+    background-color: #fff;
+    border: 0;
+    cursor: pointer;
+}

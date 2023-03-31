@@ -20,7 +20,6 @@ const InfoBlock = observer(() => {
 
     const categories = client.categories;
     const recipients = JSON.parse(JSON.stringify(client.clients));
-
     return (
         <div className="infocard">
             <div className="first_part" >
@@ -29,7 +28,7 @@ const InfoBlock = observer(() => {
             </div>
             <div className=" second_part">
                 <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-                    <AutocompleteBlock label='Клиент' data={recipients}/>
+                    <AutocompleteBlock label='Client' data={recipients}/>
                     <WhatsApp />
                 </div>
                 <div style={{ display: 'flex', position: 'relative', alignItems: 'center', justifyContent: 'space-between' }}>

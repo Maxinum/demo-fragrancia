@@ -1,4 +1,4 @@
-import {$managerHost, $host, $adminHost} from "../../../http/index";
+import {$managerHost, $host, $adminHost} from "../../../APIs/index";
 
 export const fetchClients = async () => {
     const {data} = await $managerHost.get('client')
@@ -12,5 +12,15 @@ export const fetchCategories = async () => {
 
 export const fetchDeliveryTypes = async () =>{
     const {data} = await $managerHost.get('client/deliveryTypes');
+    return data
+}
+
+export const fetchLastDays = async () => {
+    const {data} = await $managerHost.get('client/getHistory')
+    return data
+}
+
+export const fetchClientHistory = async (id) => {
+    const {data} = await $managerHost.get('client/getHistory', {params: {id}})
     return data
 }

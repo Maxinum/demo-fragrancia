@@ -2,11 +2,11 @@ import React, { useState } from 'react';
 import Box from '@mui/material/Box';
 import TabPanel from './components/TabPanel';
 import Tabs from './components/Tabs';
-import Client from './modules/Client';
-import Consumable from './modules/Consumable';
+// import Client from './modules/Client';
+// import Consumable from './modules/Consumable';
 import Perfume from './modules/Perfume';
-import Union from './modules/Union';
-import GP from './modules/GP';
+// import Union from './modules/Union';
+// import GP from './modules/GP';
 import './style.css';
 
 
@@ -15,7 +15,6 @@ export default function BasicTabs() {
     const [open, setOpen] = useState(false);
 
     const handleOpen = () => {
-        console.log('open')
         setOpen(true);
     };
     const handleClose = () => {
@@ -30,7 +29,7 @@ export default function BasicTabs() {
             <TabPanel value={value} index={1}  >
                 <Perfume close={handleClose} open={value === 1 ? open : false} />
             </TabPanel>
-            <TabPanel value={value} index={2} >
+            {/* <TabPanel value={value} index={2} >
                 <Consumable close={handleClose} open={value === 2 ? open : false} />
             </TabPanel>
             <TabPanel value={value} index={3}>
@@ -41,7 +40,7 @@ export default function BasicTabs() {
             </TabPanel>
             <TabPanel value={value} index={5}>
                 <GP close={handleClose} open={value === 5 ? open : false} />
-            </TabPanel>
+            </TabPanel> */}
             <Box sx={{ borderTop: 1, borderColor: 'divider' }}>
                 <Tabs
                     value={value}

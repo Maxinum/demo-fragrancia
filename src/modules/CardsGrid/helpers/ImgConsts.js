@@ -1,24 +1,27 @@
-import AdminLogo from '../../../assets/admin_panel_logo.jpg'
-import StorageLogo from '../../../assets/storageLogo.jpg'
-import RedactLogo from '../../../assets/redactLogo.jpg'
-import CashFlow from '../../../assets/cashFlow.jpg';
-import hunterLogo from '../../../assets/hunterLogo.jpg';
-import analyticsLogo from '../../../assets/analyticsLogo.jpg'
-import searchLogo from '../../../assets/searchLogo.jpg'
-import kanbanLogo from '../../../assets/kanbanLogo.jpg'
-import farmerLogo from '../../../assets/farmer.jpg';
+import AdminLogo from '../../../assets/imgs/forms_icons/admin.webp'
+import StorageLogo from '../../../assets/imgs/forms_icons/storage.webp'
+import RedactLogo from '../../../assets/imgs/forms_icons/redact.webp'
+import CashFlow from '../../../assets/imgs/forms_icons/cashFlow.webp';
+import hunterLogo from '../../../assets/imgs/forms_icons/hunter.webp';
+import analyticsLogo from '../../../assets/imgs/forms_icons/analytics.webp'
+import searchLogo from '../../../assets/imgs/forms_icons/search.webp'
+import kanbanLogo from '../../../assets/imgs/forms_icons/kanban.webp'
+import farmerLogo from '../../../assets/imgs/forms_icons/farmer.webp';
+import ProblemClient from '../../../assets/imgs/forms_icons/problemClient.webp';
+import CollectorLogo from '../../../assets/imgs/forms_icons/collector.webp';
 
 const logos = {
-    'Фермер': farmerLogo,
-    'Хантер': hunterLogo,
-    'Аналитика': analyticsLogo,
-    'Форма поиска': searchLogo,
-    'Форма Лидов': kanbanLogo,
-    'Спад клиентов': kanbanLogo,
-    'Админ Панель': AdminLogo,
-    'Склад': StorageLogo,
-    'Редактор': RedactLogo,
-    'ДДС': CashFlow,
+    'Farmer': farmerLogo,
+    'Hunter': hunterLogo,
+    'Analytics': analyticsLogo,
+    'Search Form': searchLogo,
+    'Lead Form': kanbanLogo,
+    'Customer decline': ProblemClient,
+    'Admin Panel': AdminLogo,
+    'Warehouse': StorageLogo,
+    'Editor': RedactLogo,
+    'DDS': CashFlow,
+    'Form of collectors': CollectorLogo,
 }
 
 export default logos;

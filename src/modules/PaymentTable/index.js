@@ -1,75 +1,29 @@
-import React,{useEffect, useState} from 'react';
-import styles from '../AromatsTable/style.module.css'
-import Select from '@mui/material/Select';
-import MenuItem from '@mui/material/MenuItem';
-import dayjs from 'dayjs';
-import TextField from '@mui/material/TextField';
-import { DesktopDatePicker } from '@mui/x-date-pickers/DesktopDatePicker';
-import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
-import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
-import { addDots } from '../../helpers/Dotter';
+import React, { Navlink, useState, useEffect, useContext } from 'react';
+import { observer } from "mobx-react-lite";
+import styles from '../AromatsTable/style.module.css';
+import { toJS } from 'mobx';
+import PaymentTable from './components/Row';
+import HeaderPayment from './components/Header';
+import FooterPayment from './components/Footer';
+import { Context } from '../..';
 
-const PaymentTable = () => {
-    const [value, setValue] = React.useState(dayjs('2014-08-18T21:11:54'));
-    const [sum, setSum] = useState('');
-    const handleChange = (newValue) => {
-      setValue(newValue);
-    };
-
-    useEffect(() => {
-        // setCategory(client.selectedCategory)
-    }, []);
-
-    const handleSumChange = (event) => {
-        const formattedValue = addDots(event.target.value);
-        setSum(formattedValue);
-    };
+const AromatTable = observer((props) => {
+    const { orders } = useContext(Context);
+    // const client = props.data.client;
+    // const products = props.data.products;
+    const rows = toJS(orders.paymentRows);
 
     return (
-        <table className={styles.maintable} data-html2canvas-ignore="true">
-            <thead style={{ backgroundColor: '#7F1D1D' }}>
-                <tr>
-                    <th style={{ width: "40%" }}>Account</th>
-                    <th style={{ width: "30%" }}>Amount</th>
-                    <th style={{ width: "30%" }}>Date</th>
-                </tr>
-            </thead>
-            <tbody id="payTableBody" data-temp="payRow">
-                <tr>
-                    <td>
-                        <Select sx={{ width: '100%', borderRadius: '0' }}>
-                            <MenuItem value=""></MenuItem>
-                            <MenuItem value="1">Kaspi</MenuItem>
-                            <MenuItem value="2">Cash ₸</MenuItem>
-                            <MenuItem value="3">Kaspi Akylbek</MenuItem>
-                            <MenuItem value="4">Kaspi Pay</MenuItem>
-                            <MenuItem value="5">Forte Akylbek</MenuItem>
-                        </Select>
-                    </td>
-                    <td>
-                        <input type="text" className="sum" value={sum} onChange={handleSumChange} />
-                    </td>
-                    <td>
-                    <LocalizationProvider dateAdapter={AdapterDayjs}>
-                        <DesktopDatePicker
-                            inputFormat="MM/DD/YYYY"
-                            value={value}
-                            onChange={handleChange}
-                            renderInput={(params) => <TextField {...params} />}
-                        />
-                        </LocalizationProvider>
-                    </td>
-                </tr>
+        <table className={styles.maintable}>
+            <HeaderPayment></HeaderPayment>
+            <tbody id="mainTableTbody" data-temp="firstRow">
+                {rows.map((element, index) => (
+                    <PaymentTable row={element} index={index}/>
+                ))}
             </tbody>
-            <tfoot>
-                <tr>
-                    <td colSpan="3" rowSpan="2" style={{ backgroundColor: '#7F1D1D' }} className={styles.plus}>
-                        <div className={styles.button_label} style={{ color: "#7F1D1D" }}>Payment</div>
-                    </td>
-                </tr>
-            </tfoot>
+            <FooterPayment></FooterPayment>
         </table>
     );
-}
+});
 
-export default PaymentTable;
+export default AromatTable;

@@ -1,20 +1,34 @@
 import React from 'react';
-import Table from '../../../../components/TabulatorTable';
+import MuiTable from '../../../MuiTable'
 import Filter from './components/Filter'
 
 const RemainModule = () => {
-    const data = [];
-    const column = [
-        { title: "Наименование", field: "name", width: '40%' },
-        { title: "К-во", field: "count", sorter: "number", width: '20%' },
-        { title: "В пути", field: "way", sorter: "number", width: '20%' },
-        { title: "Заказать", field: "order", sorter: "number", width: '20%' },
+    const headers = [
+        {
+            id: 'name',
+            numeric: false,
+            disablePadding: true,
+            label: 'Name',
+        },
+        {
+            id: 'total',
+            numeric: true,
+            disablePadding: false,
+            label: 'Total',
+        },
     ]
+
+    const data = [
+        {
+            name:'Test',
+            total:500
+        }
+    ] 
 
     return (
         <div style={{ width: '100%',padding:'2rem',boxSizing:'border-box' }}>
             <Filter />
-            <Table data={data} columns={column} />
+            <MuiTable headers={headers} data={data} name="Table" />
         </div>
     );
 }

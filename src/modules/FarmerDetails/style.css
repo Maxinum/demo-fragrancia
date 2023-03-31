@@ -37,6 +37,10 @@
     border-radius: 10px;
 }
 
+.history option, .sales option {
+    padding: 5px;
+}
+
 .card__content{
     padding: 5px 10px;
     display: flex;
@@ -61,6 +65,8 @@
 
 .month {
     text-transform: capitalize;
+    display: inline-block;
+    margin-right: 0.5em;
 }
 
 .card textarea {

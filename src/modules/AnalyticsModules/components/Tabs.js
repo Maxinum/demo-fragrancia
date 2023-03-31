@@ -16,9 +16,16 @@ export default function VerticalTabs(props) {
             value={props.value}
             onChange={props.func}
             aria-label="Vertical tabs example"
-            sx={{ borderRight: 1, borderColor: 'divider',width: '7vw' }}
+            sx={{
+                borderRight: 1,
+                position: 'sticky',
+                top: 0,
+                borderColor: 'divider',
+                width: '7vw'
+            }}
         >
             <Tab icon={<HomeIcon />} label="Главная" />
+            <Tab icon={<PeopleIcon />} label="Клиенты" />
             <Tab icon={<PaymentIcon />} label="Расходы" />
             <Tab icon={<WarehouseIcon />} label="Остатки" />
             <Tab icon={<AbcIcon />} label="ABC-XYZ" />

@@ -4,7 +4,7 @@ import SpeedDial from '@mui/material/SpeedDial';
 import SpeedDialIcon from '@mui/material/SpeedDialIcon';
 import SpeedDialAction from '@mui/material/SpeedDialAction';
 import { observer } from "mobx-react-lite";
-import PrintIcon from '@mui/icons-material/Print';
+import ExcelIcon from '@mui/icons-material/InsertDriveFile';
 import { Context } from "../index";
 import PDFfile from '../helpers/PDFFile';
 import xlsxFile from '../helpers/XLSXFile';
@@ -12,14 +12,23 @@ import xlsxFile from '../helpers/XLSXFile';
 const SpeedDialElememnt = observer((props) => {
     const [open, setOpen] = useState(false);
     const { orders } = useContext(Context);
+    const { client } = useContext(Context);
+    const selectedDelivery = client.delivery.find(item => item?.id === client.selectedDelivery);
     const data = {
         perf:orders.selectedPerf,
         cons:orders.selectedCons,
-        total1: orders.subTotal,
+        payments: orders.paymentRows,
+        total1: orders.SubTotal,
         total2: orders.SecSubTotal,
         mainTotal: orders.grandTotal,
         withoutBonus: orders.withoutDiscount,
         discount: orders.discount,
+        client: client.selectedClient,
+        date: client.date,
+        delivery: selectedDelivery !== undefined ? selectedDelivery.label : '',
+        debt: orders.calcDebt,
+        wpLink: client.wpLink,
+        orderId: orders.bufId.sale === undefined ? 0 : orders.bufId.sale[0].id,
     };
 
     return (
@@ -36,7 +45,7 @@ const SpeedDialElememnt = observer((props) => {
             >
                 <PDFfile open={open} data={data}/>
                 <SpeedDialAction
-                    icon={<PrintIcon />}
+                    icon={<ExcelIcon style={{ color: 'green' }} />}
                     tooltipTitle={'excel'}
                     onClick={()=>xlsxFile(data)}
                 />

@@ -1,20 +1,21 @@
-import React, {useContext} from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
-import { adminRoutes, managerRoutes } from '../../helpers/PagesInfo';
+import { adminRoutes, managerRoutes } from '../../app/constants/PagesInfo';
 import Card from './components/Card'
 import { Context } from '../../index';
-
+import isMobile from '../../helpers/DetectMobile';
 const CardsGrid = () => {
     const { user } = useContext(Context);
+
     return (
         <Box sx={{ flexGrow: 1, marginLeft: 'auto', marginRight: 'auto', marginTop: '2rem' }}>
             <Grid
                 container
                 direction="row"
                 justifyContent="flex-start"
-                gap={'3rem'}
-                paddingLeft={'5rem'}
+                gap={isMobile()?'1rem':'3rem'}
+                paddingLeft={isMobile()?'1rem':'5rem'}
             >
                 {managerRoutes.map(({ name, text, path, img, href }) => (
                     <Card key={name} name={name} text={text} path={path} img={img} href={href} />

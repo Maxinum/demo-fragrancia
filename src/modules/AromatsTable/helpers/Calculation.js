@@ -7,5 +7,5 @@ export const calcTotal = (index, rows) => {
 }
 
 export const calcSubTotal = (rows) => {
-    return round(Array.from(rows, (x) => x.total).reduce((a, b) => Number(a) + Number(b)));
+    return round(Array.from(rows, (x) => (x.total)).reduce((a, b) => Number(a) + Number(b)));
 }

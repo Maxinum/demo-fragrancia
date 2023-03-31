@@ -9,6 +9,7 @@ import PaymentTable from '../modules/PaymentTable';
 import Buttons from '../components/Buttons';
 import { Context } from "../index";
 import InfoBlock from '../modules/ClientBlcok';
+import HunterDetail from '../modules/HunterDetail';
 
 const Hunter = observer(() => {
 
@@ -23,10 +24,11 @@ const Hunter = observer(() => {
                 alignContent: 'center',
                 alignItems: 'flex-start',
             }}>
-                <div style={{paddingLeft: '300px'}}>
+                <HunterDetail></HunterDetail>
+                <div>
                     <InfoBlock />
-                    <AromatsTable data={store} name='Fragrances' />
-                    <SecondTable name='Accessories' />
+                    <AromatsTable data={store} name='Flavors' />
+                    <SecondTable data={store} name='Accessories' />
                     <PaymentBlock />
                     <PaymentTable />
                     <Buttons/>

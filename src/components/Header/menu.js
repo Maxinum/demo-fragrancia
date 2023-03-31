@@ -5,7 +5,7 @@ import ListItemButton from "@mui/material/ListItemButton";
 import ListItemText from "@mui/material/ListItemText";
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListSubheader from '@mui/material/ListSubheader';
-import { adminRoutes, managerRoutes } from '../../helpers/PagesInfo';
+import { adminRoutes, managerRoutes } from '../../app/constants/PagesInfo';
 import { Context } from '../../index';
 export default function MenuList() {
     const { user } = useContext(Context);

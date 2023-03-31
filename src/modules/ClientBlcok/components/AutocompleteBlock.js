@@ -1,54 +1,101 @@
-import React, { useState, useContext } from 'react';
-import TextField from '@mui/material/TextField';
-import { Autocomplete } from '@mui/material';
+import React, { useState, useContext, useEffect } from "react";
+import TextField from "@mui/material/TextField";
+import { Autocomplete } from "@mui/material";
 import { observer } from "mobx-react-lite";
 import { Context } from "../../../index";
-import setZeroes from '../helpers/setZeros';
+import setZeroes from "../helpers/setZeros";
+import { clearFarmerRows } from "../../../helpers/clearRows";
 
 const AutocompleteBlock = observer((props) => {
-
-    const { client, products } = useContext(Context);
-    let data;
-    if(props.label === 'Клиент'){
-       data = props.data.map((x) => setZeroes(x.id) + ' ' + x.name + ' ' + x.city.city + ' ' + x.phone);
-    }else{
-        data = props.data.map((x)=>x.city)
-    }
-    const date = props.date;
-    const ref = React.createRef();
-    const [href, sethref] = useState('');
-    return (
-        <Autocomplete
-            sx={{ width: '90%' }}
-            freeSolo
-            size='small'
-            options={data}
-            renderInput={(params) => (
-                <TextField
-                    variant='standard'
-                    {...params}
-                    label={props.label}
-                    inputProps={{
-                        ...params.inputProps,
-                        autoComplete: 'new-password',
-                    }}
-                />
-            )}
-            name='name'
-            type='text'
-            autoSelect={true}
-            // value={''}
-            onChange={(event, newValue) => {
-                if (newValue !== null) {
-                    // const id = Number(newValue.split(' ')[0]);
-                    // const phone = newValue.split(' ')[newValue.split(' ').length - 1]
-                    // sethref(`https://wa.me/${phone}`);
-                    // client.setSelectedCategory(props.clients.filter(item => item.id === id)[0].sales_type.id);
-                }
-            }}
-        />
-
+  const { client, orders, products } = useContext(Context);
+  const regex = /\d{11,13}/g;
+  let data;
+  if (props.label === "Клиент") {
+    data = props.data.map(
+      (x) =>
+        setZeroes(x.id) +
+        " " +
+        x.name +
+        " " +
+        x.city.city +
+        " " +
+        x.clients_phone.phone +
+        " " +
+        (x.clients_phone.phone2 ? x.clients_phone.phone2 + " " : "") +
+        (x.clients_phone.phone3 ? x.clients_phone.phone3 : "")
     );
+  } else {
+    data = props.data.map((x) => x.city);
+  }
+  const [href, sethref] = useState("");
+
+  useEffect(() => {
+    if (client.selectedClient !== "" && client.selectedClient !== null) {
+      const id =
+        typeof client.selectedClient === "string"
+          ? client.selectedClient.split(" ")[0]
+          : "";
+      const clientData = props.data.find((x) => x?.id === Number(id));
+
+      const selectedCategory = client.categories.find(
+        (item) => item?.id === clientData.sales_type.id
+      );
+      client.setSelectedCategory(selectedCategory);
+
+      const selectedDelivery = client.delivery.find(
+        (item) => item?.id === clientData.expeditor.id
+      );
+      if (selectedDelivery !== undefined) {
+        client.setSelectedDelivery(selectedDelivery.id);
+      }
+
+      orders.setSaleType(selectedCategory.id === 2 ? "Bonus" : "Discount");
+      orders.setSpentBonus(clientData.bonus);
+      orders.setInitialDebt(clientData.debt);
+    }
+  }, [client.selectedClient]);
+
+  useEffect(() => {
+    if (href !== "") {
+      client.setWpLink(href);
+    }
+  }, [href]);
+
+  return (
+    <Autocomplete
+      sx={{ width: "90%" }}
+      freeSolo
+      size="small"
+      options={data}
+      autoComplete="off"
+      renderInput={(params) => (
+        <TextField
+          autoComplete="off"
+          variant="standard"
+          {...params}
+          label={props.label}
+          inputProps={{
+            ...params.inputProps,
+            // autoComplete: 'new-password',
+          }}
+        />
+      )}
+      name="name"
+      type="text"
+      // autoSelect={}
+      value={client.selectedClient || ""}
+      onChange={(event, newValue) => {
+        if (newValue !== null) {
+          client.setSelectedClient(newValue);
+          const phones = newValue.match(regex);
+          const firstPhone = phones && phones.length > 0 ? phones[0] : null;
+          sethref(`https://wa.me/${firstPhone}`);
+        } else {
+          clearFarmerRows(client, orders);
+        }
+      }}
+    />
+  );
 });
 
 export default AutocompleteBlock;

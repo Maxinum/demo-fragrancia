@@ -12,8 +12,8 @@ import { Context } from "../index";
 import InfoBlock from '../modules/ClientBlcok';
 
 const Farmer = observer(() => {
-
     const store = useContext(Context);
+    
     return (
         <div>
             <div style={{

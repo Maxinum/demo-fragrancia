@@ -7,12 +7,12 @@ import Button from '@mui/material/Button';
 import { Login } from '../api';
 import { Context } from '../../../index';
 import Alert from '@mui/material/Alert';
-import { MAIN_ROUTE } from '../../../app/utils/consts';
+import { MAIN_ROUTE } from '../../../app/constants/consts';
 
 const AuthBlock = () => {
     const { user } = useContext(Context);
-    const [open, setOpen] = useContext('none');
-    const [alertTitle, setTitle] = useContext('')
+    const [open, setOpen] = useState('none');
+    const [alertTitle, setTitle] = useState('')
     const [data, setData] = useState({
         email: '',
         pass: '',

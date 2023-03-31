@@ -2,7 +2,7 @@ import React, { useState, useEffect, useContext } from 'react';
 import styles from '../AromatsTable/style.module.css';
 import { Context } from '../../index'
 import { observer } from 'mobx-react-lite'
-import { fetchConsun } from '../../http/ProductAPI';
+import { fetchCons } from './api';
 import Footer from '../AccessorTable/components/Footer';
 import Header from '../AccessorTable/components/Header';
 import Row from '../AccessorTable/components/Row';
@@ -16,7 +16,7 @@ const SecondTable = observer((props) => {
 
     useEffect(() => {
         if (products.perfumes.length === 0) {
-            fetchConsun().then(data => products.setConsunables(data))
+            fetchCons().then(data => products.setConsunables(data))
         }
     }, []);
 

@@ -1,18 +1,4 @@
-import Admin from "../../pages/Admin"
-import Main from '../../pages/Main'
-import Storage from '../../pages/Storage'
-import Redact from '../../pages/Redact'
-import CashFlow from "../../pages/CashFlow"
-import Hunter from "../../pages/Hunter"
-import Farmer from "../../pages/Farmer"
-import Analytics from '../../pages/Analytics'
-import Search from "../../pages/Search"
-import Login from '../../pages/Login'
-import KanbanFarmer from '../../pages/KanbanFarmer'
-import KanbanHunter from "../../pages/KanbanHunter"
-import Collector from "../../pages/Collector"
-import Profile from "../../pages/Profile"
-
+import { lazy } from 'react';
 import {
     ADMIN_ROUTE,
     LOGIN_ROUTE,
@@ -32,7 +18,22 @@ import {
     COLLECTOR_ROUTE,
     PROFILE_ROUTE,
 }
-    from "./consts"
+    from "../constants/consts";
+
+const Admin = lazy(() =>import("../../pages/Admin"));
+const Main = lazy(() =>import('../../pages/Main'));
+const Storage = lazy(()=>import('../../pages/Storage'));
+const Redact = lazy(() =>import('../../pages/Redact'));
+const CashFlow = lazy(()=>import('../../pages/CashFlow'));
+const Hunter = lazy(()=>import('../../pages/Hunter'));
+const Farmer = lazy(()=>import('../../pages/Farmer'));
+const Analytics = lazy(()=>import('../../pages/Analytics'))
+const Search = lazy(()=>import('../../pages/Search'))
+const Login = lazy(()=>import('../../pages/Login'))
+const KanbanFarmer = lazy(()=>import('../../pages/ProblemClients'))
+const KanbanHunter = lazy(()=>import('../../pages/Lead'))
+const Collector = lazy(()=>import('../../pages/Collector'))
+const Profile = lazy(()=>import('../../pages/Profile'))
 
 export const adminRoutes = [
     {
@@ -99,8 +100,8 @@ export const managerRoutes = [
         Component: Collector,
     },
     {
-        path:PROFILE_ROUTE,
-        Component:Profile,
+        path: PROFILE_ROUTE,
+        Component: Profile,
     }
 ]
 

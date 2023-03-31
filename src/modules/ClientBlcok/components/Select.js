@@ -1,43 +1,75 @@
-import React, { useState, useEffect, useContext } from 'react';
-import MenuItem from '@mui/material/MenuItem';
-import Select from '@mui/material/Select';
-import { observer } from 'mobx-react-lite'
+import React, { useState, useEffect, useContext } from "react";
+import MenuItem from "@mui/material/MenuItem";
+import Select from "@mui/material/Select";
+import { observer } from "mobx-react-lite";
 import { Context } from "../../../index";
+import { ChangePrice } from "../../AromatsTable/helpers/ChangeSaleType";
+import { toJS } from "mobx";
+import { ChangeConsPrice } from "../../AccessorTable/helpers/ChangeSaleCategory";
 
 const SalesCategory = observer((props) => {
-    const categories = props.categories;
-    const { client } = useContext(Context);
-    const [category, setCategory] = useState(client.selectedCategory);
+  const categories = props.categories;
+  const { client, orders, products } = useContext(Context);
+  const rows = toJS(orders.selectedPerf);
+  const consRows = toJS(orders.selectedCons);
+  const newRows = [...rows];
+  // const [selectedCategoryId, setSelectedCategoryId] = useState(client.selectedCategory.id);
 
-    useEffect(() => {
-        setCategory(client.selectedCategory)
-    }, [client.selectedCategory]);
-
-    return (
-
-            <Select
-                sx={{ minWidth: '100%' }}
-                value={category}
-                size='small'
-                variant='standard'
-                onChange={(event, newValue) => {
-                    setCategory(event.target.value)
-                    client.setSelectedCategory(event.target.value);
-                }}
-            >
-                {/* {categories.map((row, index) => (
-                    <MenuItem key={index} value={row.id}>{row.category || row.name}</MenuItem>
-                ))} */}
-                <MenuItem value="price_retail">Retail</MenuItem>
-                <MenuItem value="price_per_ml">With a bonus</MenuItem>
-                <MenuItem value="price_per_ml">No bonus</MenuItem>
-                <MenuItem value="price_250">250 ml</MenuItem>
-                <MenuItem value="price_500">500 ml</MenuItem>
-                <MenuItem value="price_1000">1000 ml</MenuItem>
-                <MenuItem value="price_special">Special price</MenuItem>
-                {/* <MenuItem value="sample">Жеский тест</MenuItem> */}
-            </Select>
+  useEffect(() => {
+    // setSelectedCategoryId(client.selectedCategory.id);
+    ChangePrice(
+      newRows,
+      products.perfumes,
+      orders,
+      client.selectedCategory.type
     );
+    ChangeConsPrice(
+      consRows,
+      products.consunables,
+      orders,
+      client.selectedCategory.id
+    );
+    if (!orders.keyDown) {
+    }
+  }, [client.selectedCategory]);
+
+  const handleCategoryChange = (event) => {
+    const selectedCategoryId = event.target.value;
+    const selectedCategory = categories.find(
+      (item) => item?.id === selectedCategoryId
+    );
+    client.setSelectedCategory(selectedCategory);
+    ChangePrice(
+      newRows,
+      products.perfumes,
+      orders,
+      client.selectedCategory.type
+    );
+    ChangeConsPrice(
+      consRows,
+      products.consunables,
+      orders,
+      client.selectedCategory.id
+    );
+    console.log(selectedCategory);
+    orders.setSaleType(selectedCategory.id === 2 ? "Bonus" : "Discount");
+  };
+
+  return (
+    <Select
+      sx={{ minWidth: "100%" }}
+      value={client.selectedCategory.id || ""}
+      size="small"
+      variant="standard"
+      onChange={handleCategoryChange}
+    >
+      {categories.map((row, index) => (
+        <MenuItem key={index} value={row.id}>
+          {row.category}
+        </MenuItem>
+      ))}
+    </Select>
+  );
 });
 
 export default SalesCategory;

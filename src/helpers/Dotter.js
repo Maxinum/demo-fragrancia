@@ -4,15 +4,18 @@
  * @returns {string}
  */
 export function addDots(value) {
-  const str = value.toString().replace(/\,/g, '');
-  return str.replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,");
+  const val = (String(value)).replace(/\B(?=(\d{3})+(?!\d))/g, '.');
+  return val;
 }
 
 /**
  * Function to remove commas from a string
- * @param {string} value 
- * @returns {string}
+ * @param {number} value 
+ * @returns {number}
  */
 export function removeDots(value) {
-  return value.toString().replace(/\,/g, '');
+  // return value.toString().replace(/\,/g, '');
+  const val = (String(value)).replace(/[^0-9-]/g, '');
+  const num = Number(val);
+  return num;
 }

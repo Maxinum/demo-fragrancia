@@ -1,4 +1,4 @@
-import {$managerHost, $host, $adminHost} from "../../../http/index";
+import {$managerHost, $host, $adminHost} from "../../../APIs/index";
 
 export const fetchPerfumes = async () => {
     const {data} = await $managerHost.get('product/perf')

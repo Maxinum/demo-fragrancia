@@ -1,14 +1,13 @@
-import 'react-tabulator/css/tabulator_semanticui.css';
-import { ReactTabulator } from 'react-tabulator';
 import { columns } from '../helpers/Colums';
 import React from 'react';
+import MuiTable from '../../../../MuiTable';
 
 const GPTable = () => {
     
     const data = [];
     
     return (
-        <ReactTabulator
+        <MuiTable
             data={data}
             columns={columns}
         />

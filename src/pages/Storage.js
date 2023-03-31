@@ -3,7 +3,7 @@ import React from 'react';
 const StoragePage = () => {
     return (
         <div>
-            Storage
+            Storage123
         </div>
     );
 }

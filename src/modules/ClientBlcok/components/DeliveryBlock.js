@@ -10,7 +10,10 @@ import InputLabel from '@mui/material/InputLabel';
 const DeliveryBlock = observer(() => {
 
     const { client } = useContext(Context);
-    const data = client.delivery
+    const data = client.delivery;
+    const handleDeliveryChange = (event) => {
+        client.setSelectedDelivery(event.target.value);
+    }
     return (
         <FormControl fullWidth>
             <InputLabel id="del-label">Delivery</InputLabel>
@@ -19,6 +22,8 @@ const DeliveryBlock = observer(() => {
                 size='small'
                 variant='standard'
                 labelId='del-label'
+                value={client.selectedDelivery || ''}
+                onChange={handleDeliveryChange} 
             >
                 {data.map((row, index) => (
                     <MenuItem key={index} value={row.id}>

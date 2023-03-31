@@ -11,7 +11,7 @@ import Menu from '@mui/material/Menu';
 import Drawer from '@mui/material/Drawer';
 import { Link } from 'react-router-dom';
 import MenuList from './menu';
-import {PROFILE_ROUTE} from "../../app/utils/consts"
+import {PROFILE_ROUTE} from "../../app/constants/consts"
 
 export default function Header() {
     const [anchorEl, setAnchorEl] = React.useState(null);
