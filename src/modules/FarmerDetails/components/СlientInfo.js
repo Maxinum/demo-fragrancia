@@ -16,7 +16,7 @@ const clientInfo = () => {
 
     return (
         <div className='card'>
-            <div className="history_label">Сведения о клиенте</div>
+            <div className="history_label">Customer Information</div>
             <div className="card__content">
                 <div>
                     <div>ABC-XYZ:</div>
@@ -28,7 +28,7 @@ const clientInfo = () => {
                         <div className="totalclient"></div>
                     </div>
                 ))}
-                <textarea placeholder="Комментарий..." id="card_comment"
+                <textarea placeholder="Comment..." id="card_comment"
                     cols="15" rows="5"></textarea>
             </div>
         </div>

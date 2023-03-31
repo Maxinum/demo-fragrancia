@@ -21,7 +21,7 @@ const Buttons = observer(() => {
     // });
 
     const sendOrder = (e) => {
-        let closed = e.target.innerText === 'ОФОРМИТЬ' ? 1 : 0
+        let closed = e.target.innerText === 'ARRANGE' ? 1 : 0
         const test = {
             clientId: '001',
             order_date: '1',
@@ -55,13 +55,13 @@ const Buttons = observer(() => {
                     variant="contained"
                     endIcon={<SendIcon />}
                     onClick={sendOrder}
-                >Оформить</Button>
+                >Arrange</Button>
                 <Button
                     color="inherit"
                     variant="contained"
                     endIcon={<SendIcon />}
                     onClick={sendOrder}
-                >В буфер</Button>
+                >To the buffer</Button>
         </div>
     );
 });

@@ -14,7 +14,7 @@ export default function MenuList() {
             style={{ width: 250 }}
             subheader={
                 <ListSubheader component="div" id="nested-list-subheader">
-                    Менюшка
+                    Menu
                 </ListSubheader>
             }>
             {managerRoutes.map(({ path, name, Icon }) =>

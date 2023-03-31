@@ -25,8 +25,8 @@ const Hunter = observer(() => {
             }}>
                 <div style={{paddingLeft: '300px'}}>
                     <InfoBlock />
-                    <AromatsTable data={store} name='Ароматы' />
-                    <SecondTable name='Аксессуары' />
+                    <AromatsTable data={store} name='Fragrances' />
+                    <SecondTable name='Accessories' />
                     <PaymentBlock />
                     <PaymentTable />
                     <Buttons/>

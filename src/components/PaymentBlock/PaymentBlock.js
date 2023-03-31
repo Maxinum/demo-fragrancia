@@ -10,43 +10,43 @@ const PaymentBlock = observer((props) => {
     return (
         <div className="paycard">
         <div className="paycard-note">
-            <label className="label-note" htmlFor="note">Примечание:</label>
+            <label className="label-note" htmlFor="note">Note:</label>
             <input type="text" name="note" className="note" id="commentInput" />
         </div>
         <div className="div-pay">
             <div className="debtinfo">
                 <div className="torow" data-html2canvas-ignore="true">
                     <div>
-                        Начальный долг:
+                    Initial debt:
                     </div>
                     <div id="debt" className="totals total_tg"> 0</div>
                 </div>
                 <div className="torow" data-html2canvas-ignore="true">
                     <div>
-                        Долг по текущей:
+                    Current debt:
                     </div>
                     <div id="currentDebt" className="totals total_tg">0</div>
                 </div>
                 <div className="torow" data-html2canvas-ignore="true">
-                    <div> Общий долг: </div>
+                    <div> Total debt: </div>
                     <div id="deptCalc" className="totals total_tg">0</div>
                 </div>
             </div>
             <div className="totalinfo">
                 <div className="torow">
                     <div>
-                        До скидки:
+                    Before the discount:
                     </div>
                     <div className="totals total_tg">{addDots(orders.withoutDiscount)}</div>
                 </div>
                 <div className="torow">
                     <div>
-                        Скидка:
+                    Discount:
                     </div>
                     <div className="totals total_tg">{addDots(orders.discount)}</div>
                 </div>
                 <div className="torow grandtotal">
-                    <div>К оплате: </div>
+                    <div>Payable to: </div>
                     <div className="totals total_tg">{addDots(orders.grandTotal)}</div>
                 </div>
             </div>

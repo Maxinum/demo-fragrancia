@@ -10,7 +10,7 @@ const Footer = observer((props) => {
     const price = props.store.selectedPerf[0].price;
     const newRows = [...toJS(props.store.selectedPerf)];
     const changeType = () =>{
-        const type = props.type === 'Скидка' ? 'Бонус' : 'Скидка';
+        const type = props.type === 'Discount' ? 'Bonus' : 'Discount';
         props.store.setSaleType(type);
     }
 
@@ -27,9 +27,9 @@ const Footer = observer((props) => {
         <tfoot id="firstfoot">
             <tr>
                 <td colSpan="3" rowSpan="4" className={styles.plus}>
-                    <div>{'Ароматы'}</div>
+                    <div>{'Fragrances'}</div>
                 </td>
-                <td>Подытог</td>
+                <td>Summary</td>
                 <td colSpan="3">
                     {props.subtotal}
                 </td>

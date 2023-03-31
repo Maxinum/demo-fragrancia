@@ -27,8 +27,8 @@ const Farmer = observer(() => {
                 <FarmerDetails />
                 <div>
                     <InfoBlock />
-                    <AromatsTable data={store} name='Ароматы' />
-                    <SecondTable name='Аксессуары' />
+                    <AromatsTable data={store} name='Fragrances' />
+                    <SecondTable name='Accessories' />
                     <PaymentBlock />
                     <PaymentTable />
                     <Buttons/>

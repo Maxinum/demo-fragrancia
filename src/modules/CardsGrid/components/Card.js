@@ -40,7 +40,7 @@ const CardBlock = observer((props) => {
                     </CardContent>
                 </CardActionArea>
                 <CardActions>
-                    <Button target={'_blank'} href={props.href} size="small">Узнать больше</Button>
+                    <Button target={'_blank'} href={props.href} size="small">To learn more</Button>
                 </CardActions>
             </Card>
         </div>

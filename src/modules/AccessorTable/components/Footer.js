@@ -10,10 +10,10 @@ const Footer = observer((props) => {
         <tfoot>
             <tr>
                 <td colSpan="3" rowSpan="4" className={styles.plus}>
-                    <div className="button_label">Аксессуары</div>
+                    <div className="button_label">Accessories</div>
                 </td>
                 <td>
-                    Подытог
+                    Summary
                 </td>
                 <td colSpan="3">
                     {props.subtotal}

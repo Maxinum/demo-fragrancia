@@ -72,8 +72,8 @@ export default function Header() {
                             open={Boolean(anchorEl)}
                             onClose={handleClose}
                         >
-                            <MenuItem onClick={handleClose} component={Link} to={PROFILE_ROUTE}>Профиль</MenuItem>
-                            <MenuItem onClick={handleClose}>Выйти</MenuItem>
+                            <MenuItem onClick={handleClose} component={Link} to={PROFILE_ROUTE}>Profile</MenuItem>
+                            <MenuItem onClick={handleClose}>Exit</MenuItem>
                         </Menu>
                     </div>
                 </Toolbar>

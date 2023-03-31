@@ -28,14 +28,14 @@ const SalesCategory = observer((props) => {
                 {/* {categories.map((row, index) => (
                     <MenuItem key={index} value={row.id}>{row.category || row.name}</MenuItem>
                 ))} */}
-                <MenuItem value="price_retail">Розница</MenuItem>
-                <MenuItem value="price_per_ml">С бонусом</MenuItem>
-                <MenuItem value="price_per_ml">Без бонуса</MenuItem>
-                <MenuItem value="price_250">250 мл</MenuItem>
-                <MenuItem value="price_500">500 мл</MenuItem>
-                <MenuItem value="price_1000">1000 мл</MenuItem>
-                <MenuItem value="price_special">Спеццена</MenuItem>
-                <MenuItem value="sample">Жеский тест</MenuItem>
+                <MenuItem value="price_retail">Retail</MenuItem>
+                <MenuItem value="price_per_ml">With a bonus</MenuItem>
+                <MenuItem value="price_per_ml">No bonus</MenuItem>
+                <MenuItem value="price_250">250 ml</MenuItem>
+                <MenuItem value="price_500">500 ml</MenuItem>
+                <MenuItem value="price_1000">1000 ml</MenuItem>
+                <MenuItem value="price_special">Special price</MenuItem>
+                {/* <MenuItem value="sample">Жеский тест</MenuItem> */}
             </Select>
     );
 });

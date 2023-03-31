@@ -13,7 +13,7 @@ const DeliveryBlock = observer(() => {
     const data = client.delivery
     return (
         <FormControl fullWidth>
-            <InputLabel id="del-label">Доставка</InputLabel>
+            <InputLabel id="del-label">Delivery</InputLabel>
             <Select
                 sx={{ width: '90%' }}
                 size='small'

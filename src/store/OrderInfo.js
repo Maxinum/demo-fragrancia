@@ -2,7 +2,7 @@ import { makeAutoObservable } from 'mobx'
 
 export default class OrderInfo {
     constructor() {
-        this._saleType = 'Скидка';
+        this._saleType = 'Discount';
         this._orders = [];
         this._buffer_orders = [];
         this._selectedOrder = {};

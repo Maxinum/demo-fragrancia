@@ -6,11 +6,11 @@ const Header = observer((props) => {
         <thead>
             <tr>
                 <th style={{ width: "4%" }}>№</th>
-                <th style={{ width: '8%' }}>К-во</th>
-                <th style={{ width: "60%" }}>Наименование</th>
-                <th style={{ width: "8%" }}>Объем</th>
-                <th style={{ width: "8%" }}>Цена</th>
-                <th style={{ width: "10%" }}>Итог</th>
+                <th style={{ width: '8%' }}>Quantity</th>
+                <th style={{ width: "60%" }}>Name</th>
+                <th style={{ width: "8%" }}>Volume</th>
+                <th style={{ width: "8%" }}>Price</th>
+                <th style={{ width: "10%" }}>Result</th>
             </tr>
         </thead>
     );

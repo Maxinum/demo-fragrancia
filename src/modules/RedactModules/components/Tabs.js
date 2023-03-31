@@ -11,8 +11,8 @@ export default function VerticalTabs(props) {
                 onClick={props.click}
                 onClose={props.close}
                 variant='outline'>+</Button>
-            <Tab label="Ароматы" />
-            <Tab label="Аксессуары" />
+            <Tab label="Fragrances" />
+            <Tab label="Accessories" />
             <Tab label="Склад" />
             <Tab label="Клиенты" />
             <Tab label="Готовая продукция" />

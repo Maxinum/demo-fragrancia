@@ -29,9 +29,9 @@ const PaymentTable = () => {
         <table className={styles.maintable} data-html2canvas-ignore="true">
             <thead style={{ backgroundColor: '#7F1D1D' }}>
                 <tr>
-                    <th style={{ width: "40%" }}>Счёт</th>
-                    <th style={{ width: "30%" }}>Сумма</th>
-                    <th style={{ width: "30%" }}>Дата</th>
+                    <th style={{ width: "40%" }}>Account</th>
+                    <th style={{ width: "30%" }}>Amount</th>
+                    <th style={{ width: "30%" }}>Date</th>
                 </tr>
             </thead>
             <tbody id="payTableBody" data-temp="payRow">
@@ -40,10 +40,10 @@ const PaymentTable = () => {
                         <Select sx={{ width: '100%', borderRadius: '0' }}>
                             <MenuItem value=""></MenuItem>
                             <MenuItem value="1">Kaspi</MenuItem>
-                            <MenuItem value="2">Нал ₸</MenuItem>
-                            <MenuItem value="3">Kaspi Акылбек</MenuItem>
+                            <MenuItem value="2">Cash ₸</MenuItem>
+                            <MenuItem value="3">Kaspi Akylbek</MenuItem>
                             <MenuItem value="4">Kaspi Pay</MenuItem>
-                            <MenuItem value="5">Forte Акылбек</MenuItem>
+                            <MenuItem value="5">Forte Akylbek</MenuItem>
                         </Select>
                     </td>
                     <td>
@@ -64,7 +64,7 @@ const PaymentTable = () => {
             <tfoot>
                 <tr>
                     <td colSpan="3" rowSpan="2" style={{ backgroundColor: '#7F1D1D' }} className={styles.plus}>
-                        <div className={styles.button_label} style={{ color: "#7F1D1D" }}>Оплата</div>
+                        <div className={styles.button_label} style={{ color: "#7F1D1D" }}>Payment</div>
                     </td>
                 </tr>
             </tfoot>

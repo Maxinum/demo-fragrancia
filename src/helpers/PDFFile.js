@@ -67,7 +67,7 @@ const TestPDF = observer((props) => {
                         }
                         )}
                     </View>
-                    <Text style={{ textAlign: 'right' }}>Подытог: {total}</Text>
+                    <Text style={{ textAlign: 'right' }}>Summary: {total}</Text>
                 </View>
             )
         }
@@ -89,12 +89,12 @@ const TestPDF = observer((props) => {
                         <Text style={{ textAlign: "right" }}>30.02.23</Text>
                     </View>
                 </View>
-                {dataBlock(props.data.perf, props.data.total1, 'Ароматы:')}
-                {dataBlock(props.data.cons, props.data.total2, 'Аксессуары:')}
+                {dataBlock(props.data.perf, props.data.total1, 'Fragrances:')}
+                {dataBlock(props.data.cons, props.data.total2, 'Accessories:')}
                 <View style={styles.payment}>
-                    <Text style={{ textAlign: 'right' }}>До скидки: {props.data.withoutBonus}</Text>
-                    <Text style={{ textAlign: 'right' }}>Скидка: {props.data.discount}</Text>
-                    <Text style={{ textAlign: 'right' }}>К оплате: {props.data.mainTotal}</Text>
+                    <Text style={{ textAlign: 'right' }}>Before the discount: {props.data.withoutBonus}</Text>
+                    <Text style={{ textAlign: 'right' }}>Discount: {props.data.discount}</Text>
+                    <Text style={{ textAlign: 'right' }}>Payable to: {props.data.mainTotal}</Text>
                 </View>
             </Page>
         </Document>

@@ -25,29 +25,29 @@ import {
 export const adminRoutes = [
     {
         path: ADMIN_ROUTE,
-        name: 'Админ Панель',
-        text: 'Форма регистрации пользователей',
+        name: 'Admin panel',
+        text: 'User registration form',
         Icon: ManageAccountsIcon,
         href: 'https://docs.google.com/document/d/1WmjXso6Oq57XIYzmj_3SiXFLNz65mun2EkIlEPgal5g',
     },
     {
         path: STORAGE_ROUTE,
-        name: 'Склад',
-        text: 'Форма закупа товаров',
+        name: 'Warehouse',
+        text: 'The form of goods procurement',
         Icon: WarehouseIcon,
         href: 'https://docs.google.com/document/d/1yaY7HgANF-MyHWIIDGnWVPmnM1Ry-9dW0zTSYhuA-Ww'
     },
     {
         path: REDACT_ROUTE,
-        name: 'Редактор',
-        text: 'Форма редактирования данных',
+        name: 'Editor',
+        text: 'Data editing form',
         Icon: CreateIcon,
         href: 'https://docs.google.com/document/d/10EhnA5sXEZoTO-0ZbTS1snX0mmdnGa0ARsKnWigpnGY'
     },
     {
         path: DDS_ROUTE,
-        name: 'ДДС',
-        text: 'Форма заполнение расходов',
+        name: 'DDS',
+        text: 'Expense fill out form',
         Icon: PaymentsIcon,
         href: 'https://docs.google.com/document/d/10zioz0J6iKFo2qJDv7CPafWzezho1yxGDIoj2iUx_DY'
     }
@@ -56,43 +56,43 @@ export const adminRoutes = [
 export const managerRoutes = [
     {
         path: FARMER_ROUTE,
-        name: 'Фермер',
-        text: 'Форма по работе с постоянными клиентами',
+        name: 'Farmer',
+        text: 'Form on work with regular customers',
         Icon: AddShoppingCartIcon,
         href: 'https://docs.google.com/document/d/1ZK--ONjesRIsf-Vb230mU46y5nTrZS0WWxXVrR7TtxQ'
     },
     {
         path: HUNTER_ROUTE,
-        name: 'Хантер',
-        text: 'Форма по работе с новыми клиентами',
+        name: 'Hunter',
+        text: 'Form for working with new clients',
         Icon: PersonAddIcon,
         href: 'https://docs.google.com/document/d/11G2Gv5uFKGPtNGjxRPZeVlP1aBnEQeb-DvKy6mcxCSA'
     },
     {
         path: ANALYTICS_ROUTE,
-        name: 'Аналитика',
-        text: 'Визуальное представление данных',
+        name: 'Analytics',
+        text: 'Visual representation of data',
         Icon: AnalyticsIcon,
         href: 'https://docs.google.com/document/d/1g4Lf7EParw0wlx9iqy7a07FnchZ3uom-6uvkjwzMM0A'
     },
     {
         path: SEARCH_ROUTE,
-        name: 'Форма поиска',
-        text: 'Справочник по номерам телефона',
+        name: 'Search Form',
+        text: 'Directory of phone numbers',
         Icon: SearchIcon,
         href: 'https://docs.google.com/document/d/15HddQxmUVaUaUjJsoUWccmUKoFCJg_O9-GIQJtiGwb8'
     },
     {
         path: KANBANH_ROUTE,
-        name: 'Форма Лидов',
-        text: 'Форма по работе с потенциальными клиентами',
+        name: 'Lead Form',
+        text: 'Form for working with potential clients',
         Icon: ViewKanbanIcon,
         href: 'https://docs.google.com/document/d/1xjR0vW-xcegsrrfsBP-F5-HFI6Q-BhE905B2GURh9ro'
     },
     {
         path: KANBANF_ROUTE,
-        name: 'Спад клиентов',
-        text: 'Форма по работе с проблемными клиентами',
+        name: 'Customer decline',
+        text: 'Form for working with problem clients',
         Icon: ViewKanbanIcon,
         href: ''
     },

@@ -11,7 +11,7 @@ const xlsxFile = (info) => {
     }
 
     const makeTotal = (total) => {
-        return [{ name: '', volume: '', price: 'Подытог', total: total },]
+        return [{ name: '', volume: '', price: 'Summary', total: total },]
     }
 
     const total = [
@@ -26,7 +26,7 @@ const xlsxFile = (info) => {
         if ((data.length === 1 && data[0]['name'] === '') || data.length === 0) {
             return [];
         }
-        return makeTitle('Ароматы').concat(data, space, makeTotal(info.total2));
+        return makeTitle('Fragrances').concat(data, space, makeTotal(info.total2));
     }
 
     const ConsumBlock = () => {
@@ -34,7 +34,7 @@ const xlsxFile = (info) => {
         if ((data.length === 1 && data[0]['name'] === '') || data.length === 0) {
             return [];
         }
-        return makeTitle('Аксессуары').concat(data, space, makeTotal(info.total2));
+        return makeTitle('Accessories').concat(data, space, makeTotal(info.total2));
     }
 
     const content = [].concat( PerfumeBlock(),ConsumBlock(), total);

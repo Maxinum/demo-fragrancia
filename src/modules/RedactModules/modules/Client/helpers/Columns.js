@@ -8,7 +8,7 @@ export const columns = [
         headerFilter: 'input'
     },
     {
-        title: 'Имя',
+        title: 'Name',
         field: 'name',
         editor: 'input',
         headerFilter: 'input',
@@ -16,7 +16,7 @@ export const columns = [
         validator: ['string', 'maxLength:15', 'minLength:2']
     },
     {
-        title: 'Город',
+        title: 'City',
         width: 300,
         field: 'city',
         headerFilter: 'list',
@@ -35,7 +35,7 @@ export const columns = [
         }
     },
     {
-        title: 'Телефон',
+        title: 'Phone Number',
         field: 'phone',
         editor: 'input',
         hozAlign: 'right',
@@ -45,7 +45,7 @@ export const columns = [
         validator: ['integer', 'maxLength:13', 'minLength:11']
     },
     {
-        title: 'Категория',
+        title: 'Category',
         field: 'category',
         editor: 'list',
         width: 180,
@@ -60,7 +60,7 @@ export const columns = [
         }
     },
     {
-        title: 'Менеджер',
+        title: 'Manager',
         field: 'manager',
         editor: 'list',
         width: 190,
@@ -78,7 +78,7 @@ export const columns = [
         }
     },
     {
-        title: 'Доставка',
+        title: 'Delivery',
         field: 'delivery',
         editor: 'list',
         width: 250,
@@ -98,7 +98,7 @@ export const columns = [
         }
     },
     {
-        title: 'Статус',
+        title: 'Status',
         field: 'status',
         editor: 'list',
         width: 150,
@@ -106,7 +106,7 @@ export const columns = [
         headerFilterParams: params,
         editorParams: params,
         formatter: function (cell, formatterParams, onRendered) {
-            return cell.getValue() === 1 ? 'Архив' : 'В продаже';
+            return cell.getValue() === 1 ? 'archive' : 'On sale';
         }
     },
 ];
