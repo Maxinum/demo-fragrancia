@@ -1,0 +1,20 @@
+.module{
+    width: 20vw;
+    display: flex;
+    position: sticky;
+    top: 0;
+    background-color: #fff;
+    height: 100vh;
+    flex-direction: column;
+}
+
+.buffer_label {
+    padding: 10px;
+    display: flex;
+    text-align: center;
+    background-color: #065f46;
+    height: 30px;
+    color: #fff;
+    align-items: center;
+    justify-content: space-around;
+}

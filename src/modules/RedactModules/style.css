@@ -1,0 +1,48 @@
+.tabulator-tableholder::-webkit-scrollbar {
+    width: 0.5em;
+    height: 8px;
+}
+
+.tabulator-tableholder::-webkit-scrollbar-thumb {
+    width: 0.5em;
+    background-color: #d0d3d2;
+    border-radius: 20px;
+}
+
+.tabulator-tableholder::-webkit-scrollbar-button {
+    display: none;
+}
+
+.tabulator-tableholder::-webkit-scrollbar-corner {
+    height: 10px;
+}
+
+.tabulator-tableholder::-webkit-resizer {
+    height: 10px;
+}
+
+.tabulator-headers input {
+    border-radius: 5px;
+    border: 1px solid #808080;
+    outline: none;
+}
+
+.tabulator-row .tabulator-cell {
+    padding: 0.78571em;
+    border-right: 1px solid #ddd !important;
+    vertical-align: middle;
+}
+
+.tabulator .tabulator-header .tabulator-col {
+    border-right: 1px solid #ddd !important;
+}
+
+.tabulator-row .tabulator-cell .tabulator-editing {
+    border-right: none !important;
+    border: 1px solid #1d68cd !important;
+    z-index: 5;
+}
+
+[tabulator-field~="img"] {
+    padding: 0 !important;
+}

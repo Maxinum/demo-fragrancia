@@ -1,0 +1,55 @@
+.paycard {
+    padding: 10px;
+    margin-top: 50px;
+    height: fit-content;
+    background-color: #fff;
+    width: 54vw;
+    border-radius: 5px;
+    background: #ffffff;
+    box-shadow: 5px 5px 10px #666666,
+        -5px -5px 10px #ffffff;
+}
+
+.div-pay {
+    display: flex;
+    justify-content: space-between;
+}
+
+.debtinfo .torow {
+    padding-top: 5px;
+}
+.totalinfo .torow {
+    padding-top: 5px;
+}
+
+
+.totals {
+    padding: 5px;
+}
+
+.total_tg::after {
+    content: "тг.";
+}
+.torow {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    align-content: center;
+}
+
+.del_method {
+    text-align-last: right;
+    width: 36%;
+    padding: 5px;
+}
+
+.note {
+    width: calc(65% - 170px);
+    outline: none;
+    border: 0;
+}
+.grandtotal {
+    font-weight: 700;
+    font-size: 25px;
+    color: #7F1D1D;
+}
