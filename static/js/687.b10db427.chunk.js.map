@@ -1,0 +1,1 @@
+{"version":3,"file":"static/js/687.b10db427.chunk.js","mappings":"iIAUA,UARoB,WAChB,OACI,yBAAK,cAIb,C","sources":["pages/Storage.js"],"sourcesContent":["import React from 'react';\r\n\r\nconst StoragePage = () => {\r\n    return (\r\n        <div>\r\n            Storage123\r\n        </div>\r\n    );\r\n}\r\n\r\nexport default StoragePage;\r\n"],"names":[],"sourceRoot":""}

@@ -1,0 +1,1 @@
+{"version":3,"file":"static/js/806.5fb9d103.chunk.js","mappings":"iIAUA,UARkB,WACd,OACI,yBAAK,aAIb,C","sources":["pages/Collector.js"],"sourcesContent":["import React from 'react';\r\n\r\nconst Collector = () => {\r\n    return (\r\n        <div>\r\n            Collector\r\n        </div>\r\n    );\r\n}\r\n\r\nexport default Collector;\r\n"],"names":[],"sourceRoot":""}
