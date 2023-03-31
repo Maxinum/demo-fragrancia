@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/demo-fragrancia/static/css/main.df06a9fb.css",
-    "main.js": "/demo-fragrancia/static/js/main.9a5aed49.js",
+    "main.js": "/demo-fragrancia/static/js/main.c6c3df24.js",
     "static/media/admin_panel_logo.jpg": "/demo-fragrancia/static/media/admin_panel_logo.5fd4ed1e689447cd109f.jpg",
     "static/media/storageLogo.jpg": "/demo-fragrancia/static/media/storageLogo.479e4d1fd61c239d02b3.jpg",
     "static/media/farmer.jpg": "/demo-fragrancia/static/media/farmer.32c81d1d47b0b3286fa0.jpg",
@@ -14,10 +14,10 @@
     "static/media/redactLogo.jpg": "/demo-fragrancia/static/media/redactLogo.68c0116629823d8619d9.jpg",
     "index.html": "/demo-fragrancia/index.html",
     "main.df06a9fb.css.map": "/demo-fragrancia/static/css/main.df06a9fb.css.map",
-    "main.9a5aed49.js.map": "/demo-fragrancia/static/js/main.9a5aed49.js.map"
+    "main.c6c3df24.js.map": "/demo-fragrancia/static/js/main.c6c3df24.js.map"
   },
   "entrypoints": [
     "static/css/main.df06a9fb.css",
-    "static/js/main.9a5aed49.js"
+    "static/js/main.c6c3df24.js"
   ]
 }
