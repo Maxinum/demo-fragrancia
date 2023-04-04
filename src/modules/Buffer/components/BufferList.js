@@ -28,7 +28,7 @@ const BufferListToday = observer((props) => {
         }
     }, [orders.bufId]);
 
-    const message = 'Вы не сможете вернуть заказ под номером ' + props.id;
+    const message = 'You will not be able to return the order under the number ' + props.id;
     const handleBorder = (event) => {
         const divBufopt = event.target.parentNode;
         const allDivs = document.querySelectorAll(`.${styles.div_bufopt}`);
@@ -72,9 +72,9 @@ const BufferListToday = observer((props) => {
                 <input type="radio" name="selected" onKeyDown={handleKeyDown} onClick={handleBorder} className={styles.selectradio} id={props.id} value="" />
                 <label className={styles.option_label} htmlFor={props.id}>{props.date} - {props.client} - {props.name} </label>
                 <button className={styles.imgbuffer} imgid={props.id} onClick={handleOpen}><img src={DeleteIcon} alt="удалить" width={20} /></button>
-                <DialogComponent open={open} close={handleClose} title={'Удалить заказ?'} 
-                message={message} btnAction1={handleClose} btnText1={'Отмена'} 
-                btnAction2={handleDelete} btnText2={'Удалить'} />
+                <DialogComponent open={open} close={handleClose} title={'Delete an order?'} 
+                message={message} btnAction1={handleClose} btnText1={'Cancel'} 
+                btnAction2={handleDelete} btnText2={'Delete'} />
             </div>
         </div>
     );
