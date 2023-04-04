@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/demo-fragrancia/static/css/main.f70962fd.css",
-    "main.js": "/demo-fragrancia/static/js/main.d6511bf6.js",
+    "main.js": "/demo-fragrancia/static/js/main.dc6bdfa2.js",
     "static/js/683.5434850a.chunk.js": "/demo-fragrancia/static/js/683.5434850a.chunk.js",
     "static/js/604.91727bc0.chunk.js": "/demo-fragrancia/static/js/604.91727bc0.chunk.js",
     "static/js/687.b10db427.chunk.js": "/demo-fragrancia/static/js/687.b10db427.chunk.js",
@@ -36,7 +36,7 @@
     "static/js/593.6f2d9018.chunk.js": "/demo-fragrancia/static/js/593.6f2d9018.chunk.js",
     "static/js/253.5d67bacc.chunk.js": "/demo-fragrancia/static/js/253.5d67bacc.chunk.js",
     "static/js/866.9527f122.chunk.js": "/demo-fragrancia/static/js/866.9527f122.chunk.js",
-    "static/js/225.cac680f1.chunk.js": "/demo-fragrancia/static/js/225.cac680f1.chunk.js",
+    "static/js/225.5e726da2.chunk.js": "/demo-fragrancia/static/js/225.5e726da2.chunk.js",
     "static/js/466.ebc7b6c3.chunk.js": "/demo-fragrancia/static/js/466.ebc7b6c3.chunk.js",
     "static/media/fragrancia icon.svg": "/demo-fragrancia/static/media/fragrancia icon.415326eef5aa42022d36.svg",
     "static/media/Montserrat-VariableFont_wght.ttf": "/demo-fragrancia/static/media/Montserrat-VariableFont_wght.3faa3eef13649db02044.ttf",
@@ -56,7 +56,7 @@
     "index.html": "/demo-fragrancia/index.html",
     "static/media/trash.svg": "/demo-fragrancia/static/media/trash.0fe8af7c867271922052c45e5c79597c.svg",
     "main.f70962fd.css.map": "/demo-fragrancia/static/css/main.f70962fd.css.map",
-    "main.d6511bf6.js.map": "/demo-fragrancia/static/js/main.d6511bf6.js.map",
+    "main.dc6bdfa2.js.map": "/demo-fragrancia/static/js/main.dc6bdfa2.js.map",
     "683.5434850a.chunk.js.map": "/demo-fragrancia/static/js/683.5434850a.chunk.js.map",
     "604.91727bc0.chunk.js.map": "/demo-fragrancia/static/js/604.91727bc0.chunk.js.map",
     "687.b10db427.chunk.js.map": "/demo-fragrancia/static/js/687.b10db427.chunk.js.map",
@@ -90,11 +90,11 @@
     "593.6f2d9018.chunk.js.map": "/demo-fragrancia/static/js/593.6f2d9018.chunk.js.map",
     "253.5d67bacc.chunk.js.map": "/demo-fragrancia/static/js/253.5d67bacc.chunk.js.map",
     "866.9527f122.chunk.js.map": "/demo-fragrancia/static/js/866.9527f122.chunk.js.map",
-    "225.cac680f1.chunk.js.map": "/demo-fragrancia/static/js/225.cac680f1.chunk.js.map",
+    "225.5e726da2.chunk.js.map": "/demo-fragrancia/static/js/225.5e726da2.chunk.js.map",
     "466.ebc7b6c3.chunk.js.map": "/demo-fragrancia/static/js/466.ebc7b6c3.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.f70962fd.css",
-    "static/js/main.d6511bf6.js"
+    "static/js/main.dc6bdfa2.js"
   ]
 }
